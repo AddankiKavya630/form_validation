@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <script defer>
+        function f1(){
+            b1=document.getElementById("t1").value;
+            let l1=document.getElementById("label1");
+
+            if(b1=="")
+            {
+                alert("complete first name in given field");
+                // l1.style.visibility="visible";
+                //console.log(t1.value)
+                return false;
+            }
+            if(b1.length>=50)
+            {
+                alert("first name must less than 50 characters");
+                return false
+            }
+
+            let ln=document.getElementById("t2").value;
+            if(ln=="")
+            {
+                alert("complete last name in given field");
+                return false;
+            }
+            if(ln.length>=50)
+            {
+                alert("first name must less than 50 characters")
+                return false
+            }
+
+            let c1=document.getElementById("email").value;
+            if(c1=="")
+            {
+                alert("complete email address");
+                return false;
+            }
+            pn=document.getElementById("pnum").value
+            if(pn=="")
+            {
+                alert("complete phone number");
+                return false;
+            }
+        
+            if(pn.length!=10)
+            {
+                alert("phone number must contain 10 numbers")
+                return false
+            }
+            mal=document.getElementById("male").checked
+            fem=document.getElementById("female").checked
+               if(mal==false & fem==false)
+               {
+                alert("select gender")
+                return false
+               }
+            d=document.getElementById("date")
+            if(d.value=="")
+            {
+                alert("Fill Date of birth")
+                return false
+            }
+            d2=document.getElementById("tarea")
+            if(d2.value=="")
+            {
+                alert("Fill Address")
+                return false
+            }
+            ban=document.getElementById("bang")
+            if(ban.value=="")
+            {
+                alert("Enter your city")
+                return false
+            }
+            pi=document.getElementById("pin")
+            if(pi.value=="")
+            {
+                alert("Enter your pincode")
+                return false
+            }
+            if(pi.length<6)
+            {
+                alert("pin code must contain 6 numbers")
+                return false
+            }
+            st=document.getElementById("state")
+            if(st.value=="")
+            {
+                alert("Enter your state")
+                return false
+            }
+            if(st.length>=50)
+            {
+                alert("data must less than 50 characters")
+                return false
+            }
+            cn=document.getElementById("con")
+            if(cn.value=="")
+            {
+                alert("Enter your country")
+                return false
+            }
+            if(cn.length>=50)
+            {
+                alert("data must less than 50 characters")
+                return false
+            }
+        te=document.getElementById("test")
+        if(te.length>=50)
+            {
+                alert("data must less than 50 characters")
+                return false
+            }
+          
+            else{
+                    return true;
+                }
+            
+        }
+    </script>
+</head>
+<body>
+    <form action="succes.htm" onsubmit="return f1();" id="form1">
+        <label for="" id="l1">First name</label>
+        <input type="text" placeholder="enter"id="t1">
+        <label for="" >(max. 50 characters alowed)</label>
+       <br><br>
+        <label for="" class="l2">Last Name</label>
+        <input type="text" name="" placeholder="enter" id="t2">
+        <label for="" >(max. 50 characters alowed)</label>
+       <br><br>
+        <label for="" class="l3">Email ID</label>
+        <input type="email" name="" id="email" placeholder="xyz@gmail.com">
+        <br><br>
+
+        <label for="" class="num">Mobile Number</label>
+        <input type="number" name="" id="pnum" placeholder="enter">
+        <label>(10 Digits Allowed)</label>
+        <br><br>
+        <label for="" class="l2">Gender</label>
+        <input type="radio" name="gender" id="male">
+        <label for="" id="">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="">Female</label>
+        <br><br>
+        <label for="">Date of Birth(DOB)</label>
+        <input type="date" name="" id="date">
+        <br><br>
+        <label for="" id="la">Address</label>
+        <!-- <input type="text" name="" id="" width="48" height="48"> -->
+        <textarea name="" id="tarea" cols="30" rows="10" ></textarea>
+        <br><br>
+        <label for="" class="lc">City</label>
+        <input type="text" placeholder="Banglore" id="bang">
+        <label for="">(max. 50 characters alowed)</label>
+        <br><br>
+        <label for="" class="l2">Pin Code</label>
+        <input type="text" name="" id="pin" placeholder="560038">
+        <label for="">(max. 6 numbers alowed)</label>
+        <br><br>
+        <label for="" class="l2">State</label>
+        <input type="text" name="" id="state" placeholder="Karnataka">
+        <label for="">(max. 50 characters alowed)</label>
+
+        <br><br>
+        <label for="" class="l2">Country</label>
+        <input type="text" name="" id="con" placeholder="India">
+        <label for="">(max. 50 numbers alowed)</label>
+        <br><br>
+        <label for="" class="l2">Hobbies</label>
+
+        <input type="checkbox" name="" id="n1">
+        <label for="">Drawing</label>
+        <input type="checkbox" name="" id="n1">
+        <label for="">Singing</label>
+        <input type="checkbox" name="" id="n1">
+        <label for="">Dancing</label>
+        <input type="checkbox" name="" id="n1">
+        <label for="">Sketching</label>
+        <br><br>
+        <input type="checkbox" name="" id="n5">
+        <label for="" >others</label>
+        <input type="text" placeholder="Ex:Testing" id="test">
+        <label for="">(max. 50 numbers alowed)</label>
+        <br><br><label for="" class="l2">Qualfication</label>
+        <input type="checkbox" name="" id="h1">
+        <label for="">High School(10th)</label>
+        <br>
+        <input type="checkbox" name="" id="h1">
+        <label for="">Higher school(12th)</label>
+        <br>
+        <input type="checkbox" name="" id="h1">
+        <label for="">Graduation(Bachelors)</label>
+        <br>
+        <input type="checkbox" name="" id="h1">
+        <label for="">post Graduation(Masters)</label>
+        <br>
+        <input type="checkbox" name="" id="h1">
+        <label for="">Phd</label>
+        <br><br>
+        <input type="submit" value="submit" placeholder="submit">
+        <input type="reset" value="reset" placeholder="reset">
+        <br><br>
+    </form>
+</body>
+</html>
